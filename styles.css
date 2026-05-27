@@ -95,6 +95,43 @@ h1 {
   line-height: 1.6;
 }
 
+.tools {
+  padding: clamp(3.5rem, 8vw, 5.5rem) clamp(1.5rem, 5vw, 3rem);
+  border-top: 1px solid var(--line);
+}
+
+.tools__content {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.45rem);
+  letter-spacing: -0.05em;
+  line-height: 1.15;
+}
+
+.tools__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+  margin: clamp(2rem, 4vw, 2.5rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tools__list li {
+  padding: 1.05rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  color: var(--accent);
+  background: var(--background-highlight);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 @media (max-width: 480px) {
   .hero__button {
     width: 100%;
@@ -102,5 +139,15 @@ h1 {
 
   .hero__examples {
     max-width: 100%;
+  }
+
+  .tools__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 760px) {
+  .tools__list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
